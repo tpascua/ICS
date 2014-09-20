@@ -7,19 +7,18 @@
  * then compare the two amino acid sequences.
  * The user will have to give the program two text files containing nucleotide sequences
  * via prompts given by the program.  Each time the user tells the program which file to use,
- * the program will ask whether the file given is in either 5'->3' or 3'->5'.  After that,
- * the program will ask how you would like the two files translated and compared: by mRNA, 
- * DNA, or using both methods. 
+ * the program will ask whether the file given is template or non template and is it in either 
+ * 5'->3' or 3'->5'.  After that, the program will ask how you would like the two files 
+ * translated and compared: by mRNA, DNA, or using both methods. 
  * It will then out the results in another pop up window.  If the user uses very large 
  * sequences, the pop up window will probably not fit fully onto the screen.  You can 
  * move the window around via click and drag, and you can hit 'enter' on the keyboard 
- * pif the 'OK' button cannot be found.
+ * if the 'OK' button cannot be found.
  ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 import java.util.*;
 import javax.swing.JOptionPane;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.*;
-import java.lang.Iterable;
 import java.io.File;
 import java.io.IOException;
 import java.io.FileReader;
@@ -56,6 +55,7 @@ public class exercise1b {
 		File file = new File("");															// Initialize the file variable
 		int dna = 0;																		// dna=0, translates/ 1, keep as dna/ 2, both
 		int template = 0;																	// template=0, 5'->3' / 1, 3'->5'
+		int orientation = 0;																// orientation=0, template/ 1, nontemplate 
 		
 		/* Ask user for first sequence 
 		 * Program prompts user with a pop up to select the
@@ -77,24 +77,32 @@ public class exercise1b {
 		while ((line = br.readLine()) != null) { infile1 += line; } 	// While the next read line is not null, stick it into infile1
 		br.close();														// close the reader
 		
-		/* Opens a prompt asking how you want the sequence input translated */
-		Object[] FourOptions = {"Template 5' -> 3'", " Template 3' -> 5'", "Nontemplate 5' -> 3'", " Nontemplate 3' -> 5'"};
+		/* Opens a prompt asking the direction of the sequence given */
+		Object[] twoOptionOrientation = {"5' -> 3'", "3' -> 5'"};
 		template = JOptionPane.showOptionDialog(null,
-		    "Is the sequence in " + file +" a"
-		    + "template or nontemplate strand?"
-		    + "What is the strand's orientation?",			// Message
-		    "Template Question",							// Message Title
+			"What is the strand's orientation?",			// Message
+		    "Orientation Question",							// Message Title
 		    JOptionPane.YES_NO_OPTION,						// Button Type
 		    JOptionPane.QUESTION_MESSAGE,					// Icon
 		    null,											// ?
-		    FourOptions,									// What choices to use
-		    FourOptions[0]);								// Default choice
+		    twoOptionOrientation,							// What choices to use
+		    twoOptionOrientation[0]);						// Default choice
 
-		
+		/* Opens a prompt asking about the template of the sequence given */
+		Object[] twoOptionTemplate = {"Template", "Nontemplate"};
+		orientation = JOptionPane.showOptionDialog(null,
+				"Template or Nontemplate?",						// Message
+			    "Template Question",							// Message Title
+			    JOptionPane.YES_NO_OPTION,						// Button Type
+			    JOptionPane.QUESTION_MESSAGE,					// Icon
+			    null,											// ?
+			    twoOptionTemplate,							// What choices to use
+			    twoOptionTemplate[0]);						// Default choice
+
 		seq1 = infile1;				/* Place received text into new Strings */
 		seq1 = seq1.toUpperCase();	/* Capitalize the two sequences, just in case the inputs were in lower case */
-		if (template == 1 || template == 2) { seq1 = new StringBuilder(seq1).reverse().toString(); }	/* Inverse the string */
-		if (template == 2 || template == 3) { 															/* Get the complement of the string */
+		if (orientation == 1) { seq1 = new StringBuilder(seq1).reverse().toString(); }	/* Inverse the string */
+		if (template == 1) { 															/* Get the complement of the string */
 			for (int i = 0; i <= seq1.length()-1; i++) {
 				if (seq1.charAt(i) == 'A') { tempSeq += 'T'; }
 				if (seq1.charAt(i) == 'T') { tempSeq += 'A'; }
@@ -123,24 +131,32 @@ public class exercise1b {
 		while ((line = br.readLine()) != null) { infile2 += line; }		// While the next read line is not null, stick it into infile2
 		br.close();														// close the reader
 		
-		/* Opens a prompt asking how you want the sequence input translated */
+		/* Opens a prompt asking the direction of the sequence given */
 		template = JOptionPane.showOptionDialog(null,
-			    "Is the sequence in " + file +" a"
-			    + "template or nontemplate strand?"
-			    + "What is the strand's orientation?",			// Message
+			"What is the strand's orientation?",			// Message
+		    "Orientation Question",							// Message Title
+		    JOptionPane.YES_NO_OPTION,						// Button Type
+		    JOptionPane.QUESTION_MESSAGE,					// Icon
+		    null,											// ?
+		    twoOptionOrientation,							// What choices to use
+		    twoOptionOrientation[0]);						// Default choice
+
+		/* Opens a prompt asking about the template of the sequence given */
+		orientation = JOptionPane.showOptionDialog(null,
+				"Template or Nontemplate?",						// Message
 			    "Template Question",							// Message Title
 			    JOptionPane.YES_NO_OPTION,						// Button Type
 			    JOptionPane.QUESTION_MESSAGE,					// Icon
 			    null,											// ?
-			    FourOptions,									// What choices to use
-			    FourOptions[0]);								// Default choice
+			    twoOptionTemplate,							// What choices to use
+			    twoOptionTemplate[0]);						// Default choice
+
 		
 		
 		seq2 = infile2;				/* Place received text into new Strings */
 		seq2 = seq2.toUpperCase();	/* Capitalize the two sequences, just in case the inputs were in lower case */
-		if (template == 1) { seq2 = new StringBuilder(seq2).reverse().toString(); }
-		if (template == 1 || template == 2) { seq1 = new StringBuilder(seq1).reverse().toString(); }	/* Inverse the string */
-		if (template == 2 || template == 3) { 															/* Complement the string */
+		if (orientation == 1) { seq2 = new StringBuilder(seq2).reverse().toString(); }	/* Inverse the string */
+		if (template == 1) { 															/* Complement the string */
 			for (int i = 0; i <= seq2.length()-1; i++) {
 				if (seq2.charAt(i) == 'A') { tempSeq += 'T'; }
 				if (seq2.charAt(i) == 'T') { tempSeq += 'A'; }
@@ -161,10 +177,7 @@ public class exercise1b {
 			JOptionPane.showMessageDialog(null, "One or both of the input sequences may not be a valid nucleotide sequence.", "Error" , JOptionPane.WARNING_MESSAGE);
 			System.exit(0);
 		}		
-		/* Capitalize the two sequences, just in case the inputs were in lower case */
 		
-		
-
 		/* * * * * * * * * * * * * *
 		 * STEP 2
 		 * TRANSCRIPTION
@@ -200,7 +213,6 @@ public class exercise1b {
 			seq1 = seq1.replace('T', 'U');
 			seq2 = seq2.replace('T', 'U');			
 		}
-
 		
 		/* * * * * * * * * * * * * *
 		 * STEP 3
@@ -235,6 +247,7 @@ public class exercise1b {
 		int mctr = 0; 											// mismatch counter
 		for (int i=0; i <= aminoSeq1.length()-1; i++) {			
 			if (aminoSeq1.charAt(i) != aminoSeq2.charAt(i)) {  	// if true, there is a mismatch
+				//System.out.println(Character.toString(aminoSeq1.charAt(i)) + Integer.toString(i+1) + Character.toString(aminoSeq2.charAt(i)));	//Test line
 				String temp = Character.toString(aminoSeq1.charAt(i)) + Integer.toString(i+1) + Character.toString(aminoSeq2.charAt(i));
 				mutations += temp + "  ";
 				mctr++;
@@ -324,6 +337,7 @@ class Dictionary{
 		dictionary.put("AAU", "N");
 		dictionary.put("ASC", "N");
 		dictionary.put("AAT", "N");
+		dictionary.put("AAC", "N");
 		
 		// ASPARTIC ACID
 		dictionary.put("GAU", "D");
@@ -384,6 +398,7 @@ class Dictionary{
 		
 		// METHIONINE
 		dictionary.put("AUG", "M");
+		dictionary.put("ATG", "M");
 		
 		// PHENLYLALANINE
 		dictionary.put("UUU", "F");
