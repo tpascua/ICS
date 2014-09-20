@@ -47,6 +47,17 @@ public class exercise1b {
 		 * for each line of data in infile2
 		 * 		concatenate line of data to seq2
 		 * * * * * * * * * * * * * * */
+		/* An information panel */
+		JOptionPane.showOptionDialog(null,
+				"Choose two text files with "
+				+ "sequences to compare.",			// Message
+			    "Explaination",						// Message Title
+			    JOptionPane.DEFAULT_OPTION,			// Button Type
+			    JOptionPane.INFORMATION_MESSAGE,	// Icon
+			    null,								// ?
+			    null,								// What choices to use
+			    null);								// Default choice
+		
 		/* Initialize all variables used */
 		String 	infile1, infile2, mutations, seq1, seq2, tempSeq, aminoSeq1, aminoSeq2,
 				result, line, dnaSeq1, dnaSeq2, dnaAminoSeq1, dnaAminoSeq2 = new String();	// The strings used
