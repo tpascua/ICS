@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html><head>
+  <!--
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+  -->
+  <script src="javascripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="javascripts/JS.CSS.js" type="text/javascript"></script>
+  <script src="javascripts/JS.Support.js" type="text/javascript"></script>
+  <script src="javascripts/image.js" type="text/javascript"></script>
+  <script src="javascripts/cs.js" type="text/javascript"></script>
+  <link href="stylesheets/image.css" rel="stylesheet"/>
+  <title>Image Editor</title>
+</head><body>
+  <h1>Image Editor</h1>
+  <div id="playground">
+    <img id="image" src="assets/borat.png" />
+  </div>
+    <!-- canvas playground added for Assignment 3 -->
+  <div id="canvas_playground">
+    <canvas id="stickman" width="500" height ="500"> </canvas>
+  </div>
+  <div id="controls">
+    <label for="top">Top: </label>
+    <input id="top" type="text" />
+    <label for="left">Left: </label>
+    <input id="left" type="text" />
+    <button id="position">Position</button>
+    <label for="width">Width: </label>
+    <input id="width" type="text" />
+    <label for="height">Height: </label>
+    <input id="height" type="text" />
+    <button id="resize">Resize</button>
+    <label for="border_width">Border Width: </label>
+    <input id="border_width" type="text" />
+    <label for="border_width">Border Color: </label>
+    <input id="border_color" type="text" />
+    <button id="set_border">Set Border</button>
+    <label for="margin">Margin: </label>
+    <input id="margin" type="text" />
+    <button id="set_margin">Set Margin</button>
+    <label for="padding">Padding: </label>
+    <input id="padding" type="text" />
+    <button id="set_padding">Set Padding</button>
+    <!-- 'links' added for Assignment 1 Problem 2: Adding Links  -->
+    <label for="link">Link: </label>
+    <input id="link" type="text" value="http://www.google.com/"/>
+    <button id="set_link">Set Link</button>
+  </div>
+</body></html>
