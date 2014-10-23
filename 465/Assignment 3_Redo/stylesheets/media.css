@@ -1,0 +1,66 @@
+* {
+  margin: 0 2px;
+  padding: 0;
+  font-family: Arial, "MS Trebuchet", sans-serif;
+}
+h1 {
+  font-size: 18px;
+  margin: 3px 0;
+}
+table {
+  border-collapse: collapse;
+}
+label, input, button {
+  vertical-align: middle;
+  font-size: 12px;
+}
+label {
+  padding-left: 3px;
+  width: 30px;
+}
+button {
+  width: 55px;
+}
+.short {
+  width: 32px;
+}
+.wide {
+  width: 202px;
+}
+#playground, #controls {
+  position: relative;
+  display: block;
+  vertical-align: top;
+}
+#playground {
+  width: 580px;
+  height: 300px;
+  margin-top: 3px;
+  left: 2px;
+  background-color: #dddddd;
+}
+.selected {
+  outline: 2px dashed orange;
+}
+#image, #drawing {
+  position: absolute;
+  display: block;
+}
+#image {
+  top: 15px;
+  left: 10px;
+  width: 200px;
+  height: 230px;
+  margin: 10px 20px;
+  border: 5px solid #fff009;
+  border-top-color: red;
+  border-bottom-color: rgb(232,140,50);
+}
+#drawing {
+  top: 13px;
+  left: 250px;
+  width: 200px;
+  height: 230px;
+  border: 3px solid blue;
+  background: white;
+}

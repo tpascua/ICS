@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html><head>
+  <title>Media Editor</title>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script> -->
+  <script src="javascripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="javascripts/js.Script.js" type="text/javascript"></script>
+  <script>
+    $(function () {  // called when page is ready
+      // load all classes
+      js.Script.load({
+        Css:    ['Support'],
+        Log:    ['Support'],
+        Media:  ['Support', 'Css'],
+        Image:  ['Media'],
+        Stage:  ['Media'],
+        Editor: ['Image', 'Stage']
+      }, 'js'); // 'js' namespace
+    });
+  </script>
+  <link href="stylesheets/media.css" rel="stylesheet"/>
+</head><body>
+  <h1>Media Editor</h1>
+  <table id="controls"><tr><th>
+    <button id="set_area">Area</button>
+  </th><td>
+    <label for="top">Top: </label>
+  </td><td>
+    <input id="top" class="short" type="text" />
+    <label for="left">Left: </label>
+    <input id="left" class="short" type="text" />
+    <label for="width">Width: </label>
+    <input id="width" class="short" type="text" />
+  </td><td>
+    <label for="height">Height: </label>
+  </td><td>
+    <input id="height" class="short" type="text" />
+  </td><td>
+  </td></tr><tr><th>
+    <button id="set_border">Border</button>
+  </th><td>
+    <label for="border_width">Width: </label>
+  </td><td>
+    <input id="border_width" class="wide" type="text" />
+  </td><td>
+    <label for="border_width">Color: </label>
+  </td><td>
+    <input id="border_color" class="wide" type="text" />
+  </td></tr><tr><th>
+    <button id="set_layout">Layout</button>
+  </th><td>
+    <label for="margin">Margin: </label>
+  </td><td>
+    <input id="margin" class="wide" type="text" />
+  </td><td>
+    <label for="padding">Padding: </label>
+  </td><td>
+    <input id="padding" class="wide" type="text" />
+  </td></tr><tr><th>
+    <button id="set_link">Link</button>
+  </th><td>
+    <label id="link_label" for="link">Page: </label>
+  </td><td>
+    <input id="link" class="wide" type="text" value="target.html"/>
+  </td><td>
+    <label id="test_link_label" for="test_links">
+      <input id="test_links" type="checkbox" />test
+    </label>
+  </td></tr></table>
+  <div id="playground">
+    <img id="image" src="assets/borat.png" />
+    <canvas id="drawing"> </canvas>
+  </div>
+</body></html>
