@@ -146,13 +146,15 @@
 
     dom.set_layout.click(function() {
       var margin, padding;
-      margin = JS.Support.parse(dom.margin.val(), JS.Css.arounds);
-      padding = JS.Support.parse(dom.padding.val(), JS.Css.arounds);
-      selected.padding(Js.Css.toArounds(padding));
-      return selected.margin(Js.Css.toArounds(margin));
+      margin = js.Support.parse(dom.margin.val(), js.Css.arounds);
+      selected.margin(js.Css.toArounds(margin));
+      padding = js.Support.parse(dom.padding.val(), js.Css.arounds);
+      return selected.padding(js.Css.toArounds(padding));
     });
 
-    dom.set_link.click(function() {});
+    dom.set_link.click(function() {
+      return selected.link(dom.link.val());
+    });
 
     return Editor;
 

@@ -115,5 +115,12 @@ class window.js.Media
       link_ = link_.trim()
       # If blank then its also null
       link_ = null if link_ is ""
-    @link_ = link_  
-    @
+      @link_ = link_
+      # If @link has some link in it, go to it
+      if @link_?
+        @element.click =>
+          window.location = @link_
+      # Do nothing if @link has nothing in it
+      else @element.click ->    
+      @
+    else @link_

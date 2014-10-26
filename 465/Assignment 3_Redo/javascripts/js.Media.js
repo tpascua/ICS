@@ -100,9 +100,20 @@
         if (link_ === "") {
           link_ = null;
         }
+        this.link_ = link_;
+        if (this.link_ != null) {
+          this.element.click((function(_this) {
+            return function() {
+              return window.location = _this.link_;
+            };
+          })(this));
+        } else {
+          this.element.click(function() {});
+        }
+        return this;
+      } else {
+        return this.link_;
       }
-      this.link_ = link_;
-      return this;
     };
 
     return Media;
