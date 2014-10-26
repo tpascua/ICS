@@ -93,9 +93,14 @@ class window.js.Editor
   # Changes the margin around and the padding within the selected media element
   # when the user clicks "Set" next to layout margin and padding entries
   dom.set_layout.click =>
-    # to be implemented...
+    # Implemented as part of Assignment 3
+    margin = JS.Support.parse dom.margin.val(), JS.Css.arounds
+    padding = JS.Support.parse dom.padding.val(), JS.Css.arounds
+    selected.padding Js.Css.toArounds padding
+    selected.margin Js.Css.toArounds margin
 
   # Changes the target page's URL of the selected media element
   # when the user clicks clicks "Set Link"
   dom.set_link.click =>
-    # to be implemented...
+    # Implemented as part of Assignment 3
+    selected.link dom.link.val()

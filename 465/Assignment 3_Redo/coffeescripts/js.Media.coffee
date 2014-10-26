@@ -111,6 +111,9 @@ class window.js.Media
   # Otherwise the click wil display the target page within the browser.
   link: (link_) ->
     if link_?
-      # to be implemented...
-      @
-    else @link_
+      # Get rid of extra white space
+      link_ = link_.trim()
+      # If blank then its also null
+      link_ = null if link_ is ""
+    @link_ = link_  
+    @

@@ -167,7 +167,7 @@ class window.js.Color
         rgbValues = "#{red},#{green},#{blue}"
         if opacity? then "rgba(#{rgbValues},#{opacity})" else "rgb(#{rgbValues})"
         
-  assign color for color in Color.colors
+      assign color for color in Color.colors
           
         hexColor = ((256 + value.red) * 256 + value.green) * 256 + value.blue
         hexColor.toString(16).setCharAt 0, '#'
