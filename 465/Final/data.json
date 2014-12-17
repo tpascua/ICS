@@ -1,0 +1,9 @@
+var appetizer = [
+	{
+		"food": "Fried Chicken",
+		"restaurant": "Kentucky Fried Chicken"
+	},{
+		"food": "Baked Chicken",
+		"restaurant": "Kentucky Baked Chicken"
+	}
+]

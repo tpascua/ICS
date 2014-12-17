@@ -1,0 +1,25 @@
+body {
+	background-image: url(../assets/retina_wood.png);
+  background-color: #EBE8E4;
+  color: #222;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+/* Container Border */
+container {
+border: 12px solid #FFFFFF;
+border-radius: 10px;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+#main_body_container {
+	border-radius: 10px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 3px solid #DEDEDE;
+	background-color: white;
+
+}

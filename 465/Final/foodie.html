@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Food App Thing</title>
+
+    <!-- Bootstrap core CSS 
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="stylesheets/carousel.css">
+	<link rel="stylesheet" href="stylesheets/navbar.css">
+	<link rel="stylesheet" href="stylesheets/global.css">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	
+  </head>
+
+  <body>
+<!-- NAVBAR  ================================================== -->
+	<div class="navbar-wrapper">
+	    <nav>
+	      <ul>
+	        <li><a href="foodie.html">Home</a> </li>
+	        <li><a href="#">Eat Out<span class="caret"></span></a>
+	          	<div><ul>
+	              <li><a href="view-restaurant.html">Restaurants</a></li>
+	              <li><a href="view-non-restaurant.html">Non-Restaurants</a></li>
+	        	</ul></div></li>
+	        <li><a href="#">Eat In<span class="caret"></span></a>
+	          	<div><ul>
+	              <li><a href="view-food-appetizer.html">Appetizers</a></li>
+	              <li><a href="view-food-maincourse.html">Main Courses</a></li>
+	              <li><a href="view-food-dessert.html">Desserts</a></li>
+	            </ul></div></li>
+	        <li><a href="#">Chime In<span class="caret"></span></a>
+	      		<div><ul>
+	              <li><a href="share-recipe.html">Recipe</a></li>
+	              <li><a href="share-restaurant.html">Restaurant Item</a></li>
+	        	</ul></div></li>
+	      </ul>
+	    </nav>
+    </div>
+<!-- NAVBAR  END ================================================== -->
+    
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="assets/Tomatoes.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Looking for the best food around?</h1>
+              <p>Look no further.</p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/vegies_cut_up.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Get the food somehow.</h1>
+              <p>You'll be able to find the food you're craving, even if you have to make it yourself!</p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="assets/IMG_0140.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Brag about it.</h1>
+              <p>Share your favorite foods and recipes.</p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle"  id="marketing1" onload="this.style.opacity='1';" src="assets/expensive-food-1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Get Food</h2>
+          <p>Looking for a something good to eat doesn't have to be hard.  Various locales offering the best you've ever tasted can be found here.</p>
+          <!--<p><a class="btn btn-default" href="#" role="button">Get Eating &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" id="marketing2" onload="this.style.opacity='1';" src="assets/cooking-sample.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Cook Food</h2>
+          <p>For some of us, cooking can be a very daounting task.  You can get recipes for whatever you are trying to make, from the simple to the extravagant.</p>
+          <!--<p><a class="btn btn-default" href="#" role="button">Get Cooking &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" id="marketing3" onload="this.style.opacity='1';" src="assets/sharing food.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2>Offer Food</h2>
+          <p>If you think the food suggested here sucks, then let us know!  Post your own suggestions, and let others know what you think is better!</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">Get Sharing &raquo;</a></p>-->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 ICS465 Final, Inc. &middot; <a href="http://www2.hawaii.edu/~janst/465/projects.html">Finals</a> &middot; <a href="http://www2.hawaii.edu/~janst/465/">Course Page</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+
+    
+  </body>
+</html>

@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Food App Thing</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+	<link rel="stylesheet" href="stylesheets/navbar.css">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="stylesheets/global.css">
+	<!-- CKEDITOR  -->
+    <script src="//cdn.ckeditor.com/4.4.6/standard-all/ckeditor.js"></script>
+    <script src="javascripts/comment.js"></script>	
+    
+  </head>
+  
+
+  <body>
+	<br />
+<!-- NAVBAR  ================================================== -->
+	<div class="navbar-wrapper">
+	    <nav>
+	      <ul>
+	        <li><a href="foodie.html">Home</a> </li>
+	        <li><a href="#">Eat Out<span class="caret"></span></a>
+	          	<div><ul>
+	              <li><a href="view-restaurant.html">Restaurants</a></li>
+	              <li><a href="view-non-restaurant.html">Non-Restaurants</a></li>
+	        	</ul></div></li>
+	        <li><a href="#">Eat In<span class="caret"></span></a>
+	          	<div><ul>
+	              <li><a href="view-food-appetizer.html">Appetizers</a></li>
+	              <li><a href="view-food-maincourse.html">Main Courses</a></li>
+	              <li><a href="view-food-dessert.html">Desserts</a></li>
+	            </ul></div></li>
+	        <li><a href="#">Chime In<span class="caret"></span></a>
+	      		<div><ul>
+	              <li><a href="share-recipe.html">Recipe</a></li>
+	              <li><a href="share-restaurant.html">Restaurant Item</a></li>
+	        	</ul></div></li>
+	      </ul>
+	    </nav>
+    </div>
+<!-- NAVBAR  END ================================================== -->
+
+
+<!--  CONTENT ==============================-->
+	<div class="container">
+		<h1>Spaghetti</h1>
+		<h3>Ingredients</h3>
+			<ul>
+				<li>6-8 oz. spaghetti</li>
+				<li>2-4 cloves garlic (however much you want)</li>
+				<li>a handful of cherry tomatoes (however much you want)</li>
+				<li>1/4 to 1/2 cup olive oil</li>
+				<li>salt and pepper</li>
+				<li>2-5 basil leaves (optional)</li>
+				<li>grated parmesean cheese (optional)</li>
+			</ul>
+		<h3>Steps</h3>
+			<ol>
+				<li>Halve the tomatoes and mince the garlic finely.</li>
+				<li>Put the tomatoes, minced garlic, and basil into a bowl with some olive oil and salt/pepper it to your preference.  Let it sit for a while.</li>
+				<li>In a pot, get water boiling, then reduce the heat slightly and add your spaghetti for 3-5 minutes.  Make sure to salt your water or you get bland spaghetti.</li>
+				<li>When the pasta is done, drain the spaghetti then add it to the bowl with the tomatoes in it.</li>
+				<li>Mix it around, add cheese, eat it by yourself or someone else.</li>
+			</ol>
+	</div>
+	<br />
+	<div class="container">	
+		<h2>Comments</h2>
+		<div id="comment_box"></div>
+    	<form id="editor-form">
+      		<textarea class="editor" name="editor1" id="editor1" rows="10" cols="80"></textarea>		
+      		<button type="submit" id="comment_button" class="btn btn-success btn-lg" onclick="commenter(this.form)">Comment</button>  		
+    	</form>
+    	    	
+		<script>CKEDITOR.replace( 'editor1' );</script>
+
+
+	</div>
+
+<!--  CONTENT END ==============================-->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 ICS465 Final, Inc. &middot; <a href="http://www2.hawaii.edu/~janst/465/projects.html">Finals</a> &middot; <a href="http://www2.hawaii.edu/~janst/465/">Course Page</a></p>
+      </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	    
+
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	
+
+    
+  </body>
+</html>
